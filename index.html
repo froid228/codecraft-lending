@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeCraft — IT-аутсорсинг для стартапов</title>
+  <meta name="description" content="Full-stack команда для MVP, scale-up и production. От 1 дня до запуска.">
+  
+  <!-- Pure.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
+  
+  <!-- Шрифт Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <style>
+    /* ===== Базовые стили ===== */
+    :root {
+      --primary: #2c5530;
+      --primary-dark: #1e3a22;
+      --text: #111;
+      --light-bg: #f9fafb;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      margin: 0;
+      background: white;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* ===== Переопределение Pure.css ===== */
+    .pure-button {
+      background-color: var(--primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      border: none;
+      transition: all 0.3s ease;
+    }
+    .pure-button:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    .pure-button-secondary {
+      background: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+    }
+    .pure-button-secondary:hover {
+      background: var(--light-bg);
+    }
+
+    /* ===== Блоки ===== */
+    section {
+      padding: 4rem 0;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .mb-2 { margin-bottom: 2rem; }
+    .mb-1 { margin-bottom: 1rem; }
+
+    /* ===== Хедер ===== */
+    .header {
+      background: white;
+      box-shadow: 0 1px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* ===== Герой ===== */
+    .hero {
+      background: var(--light-bg);
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.125rem;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    /* ===== Услуги ===== */
+    .services h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+    .service-card {
+      padding: 2rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+    }
+    .service-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    /* ===== Контакты ===== */
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: inherit;
+    }
+
+    /* ===== Футер ===== */
+    .footer {
+      background: #111;
+      color: white;
+      padding: 3rem 0 2rem;
+    }
+    .footer a { color: #ccc; }
+    .footer a:hover { color: white; }
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .social-links a {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      background: #333;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Хедер -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo">CodeCraft</a>
+      <nav class="nav">
+        <ul class="pure-menu-list" style="display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0;">
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Герой -->
+  <section class="hero">
+    <div class="container">
+      <h1>Разработка, от которой растёт ваш бизнес</h1>
+      <p>Full-stack команда для стартапов и scale-up’ов. От MVP до production — за 4 недели.</p>
+      <a href="#contact" class="pure-button">Обсудить проект</a>
+    </div>
+  </section>
+
+  <!-- О нас -->
+  <section id="about" class="about">
+    <div class="container text-center">
+      <h2>Почему именно мы?</h2>
+      <p class="mb-2">Мы не просто пишем код — мы решаем бизнес-задачи.</p>
+      <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-3">
+          <div class="service-card">
+            <h3>Speed</h3>
+            <p>Первый прототип — за 7 дней. MVP — за 21 день.</p>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-3">
+          <div class="service-card">
+            <h3>Transparency</h3>
+            <p>Еженедельные демо, чёткий backlog, никаких скрытых часов.</p>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-3">
+          <div class="service-card">
+            <h3>Quality</h3>
+            <p>Тесты, ревью, CI/CD — ваш продукт будет стабильным.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Услуги -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="text-center">Наши услуги</h2>
+      <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-2 mb-2">
+          <div class="service-card">
+            <h3>Frontend</h3>
+            <p>React, Vue, TypeScript, PWA, адаптивная вёрстка под все устройства.</p>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 mb-2">
+          <div class="service-card">
+            <h3>Backend</h3>
+            <p>Node.js, Python, Go, микросервисы, REST/GraphQL API.</p>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 mb-2">
+          <div class="service-card">
+            <h3>DevOps</h3>
+            <p>Docker, Kubernetes, AWS/GCP, CI/CD, мониторинг и логирование.</p>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2">
+          <div class="service-card">
+            <h3>UI/UX Design</h3>
+            <p>От пользовательских сценариев до прототипов и дизайн-системы.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contact" class="contact">
+    <div class="container text-center">
+      <h2>Готовы начать?</h2>
+      <p class="mb-2">Напишите нам — ответим в течение 2 часов.</p>
+      <form class="contact-form pure-form pure-form-aligned" style="max-width: 500px; margin: 0 auto;">
+        <input type="email" placeholder="your@email.com" required />
+        <textarea rows="3" placeholder="Опишите вашу задачу"></textarea>
+        <button type="submit" class="pure-button pure-button-primary">Отправить</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container">
+      <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-3">
+          <h3>CodeCraft</h3>
+          <p>IT-аутсорсинг для стартапов с 2023 года.</p>
+          <div class="social-links">
+            <a href="#" aria-label="GitHub">GH</a>
+            <a href="#" aria-label="Telegram">TG</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-2-3">
+          <div class="pure-g">
+            <div class="pure-u-1 pure-u-md-1-2">
+              <h4>Услуги</h4>
+              <ul style="list-style: none; padding: 0;">
+                <li><a href="#">Frontend</a></li>
+                <li><a href="#">Backend</a></li>
+                <li><a href="#">DevOps</a></li>
+                <li><a href="#">Дизайн</a></li>
+              </ul>
+            </div>
+            <div class="pure-u-1 pure-u-md-1-2">
+              <h4>Контакты</h4>
+              <p>hello@codecraft.dev</p>
+              <p>Moscow, Russia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 2rem; color: #777;">
+        &copy; 2025 CodeCraft. Все права защищены.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
