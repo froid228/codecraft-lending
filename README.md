@@ -7,4 +7,4 @@ IT-аутсорсинговая компания для стартапов и sc
 - **Подход**: минимализм, компонентная структура, семантическая вёрстка
 - **Адаптивность**: mobile-first, сетка Pure.css
 ## Github pages
-[https://froid228.github.io/codecraft-landing/](https://froid228.github.io/codecraft-landing/)
+(https://froid228.github.io/codecraft-lending/)
