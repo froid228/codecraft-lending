@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — CodeCraft</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <style>
+    details {
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 1rem;
+    }
+    summary {
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    summary::after {
+      content: " +";
+      color: #2c5530;
+    }
+    details[open] summary::after {
+      content: " -";
+    }
+  </style>
+</head>
+<body>
+  <!-- Хедер -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">CodeCraft</a>
+      <nav class="nav">
+        <ul class="pure-menu-list" style="display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0;">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="faq.html" class="active">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Контент -->
+  <main class="main">
+    <section class="section">
+      <div class="container">
+        <h1>Часто задаваемые вопросы</h1>
+        <details>
+          <summary>Как начать работу с вами?</summary>
+          <p>Напишите нам на hello@codecraft.dev или заполните форму на странице «Контакты». Мы ответим в течение 2 часов.</p>
+        </details>
+        <details>
+          <summary>Сколько стоит MVP?</summary>
+          <p>Стоимость зависит от сложности, но типовой MVP для стартапа стоит от 300 000 ₽ и занимает 4 недели.</p>
+        </details>
+        <details>
+          <summary>Есть ли у вас NDA?</summary>
+          <p>Да, мы подписываем NDA до начала работы над проектом.</p>
+        </details>
+        <details>
+          <summary>Работаете ли вы с физическими лицами?</summary>
+          <p>Да, мы работаем как с юрлицами, так и с физлицами (с ИП или без).</p>
+        </details>
+        <details>
+          <summary>Как происходит оплата?</summary>
+          <p>Оплата поэтапная: 50% аванс, 50% по завершении. Возможна рассрочка до 3 месяцев.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 CodeCraft. Все права защищены.</p>
+    </div>
+  </footer>
+</body>
+</html>
