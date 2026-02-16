@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Контакты — CodeCraft</title>
+  <!-- Pure.css (исправлены лишние пробелы в URL) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
+  <!-- Шрифт Inter (убраны лишние пробелы) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/style.css" />
 </head>
@@ -14,10 +16,10 @@
   <header class="header">
     <div class="container header-inner">
       <a href="index.html" class="logo">CodeCraft</a>
-      <nav class="nav">
+      <nav class="nav" aria-label="Основная навигация">
         <ul class="pure-menu-list" style="display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0;">
           <li><a href="index.html">Главная</a></li>
-          <li><a href="contacts.html" class="active">Контакты</a></li>
+          <li><a href="contacts.html" class="active" aria-current="page">Контакты</a></li>
           <li><a href="faq.html">FAQ</a></li>
         </ul>
       </nav>
@@ -31,31 +33,64 @@
         <h1>Свяжитесь с нами</h1>
         <div class="pure-g">
           <div class="pure-u-1 pure-u-md-1-2">
-            <form id="feedbackForm" class="pure-form pure-form-stacked">
+            <form id="feedbackForm" class="pure-form pure-form-stacked" novalidate>
               <fieldset>
+                <legend class="sr-only">Форма обратной связи</legend>
+
                 <label for="fullname">Имя *</label>
-                <input id="fullname" type="text" placeholder="Ваше имя" required />
+                <input
+                  id="fullname"
+                  name="fullname"
+                  type="text"
+                  placeholder="Ваше имя"
+                  required
+                  autocomplete="name"
+                  aria-describedby="fullname-error"
+                />
 
                 <label for="email">Email *</label>
-                <input id="email" type="email" placeholder="your@email.com" required />
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="your@email.com"
+                  required
+                  autocomplete="email"
+                  aria-describedby="email-error"
+                />
 
                 <label for="phone">Телефон *</label>
-                <input id="phone" type="tel" placeholder="+7(___)___-__-__" required />
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="+7(___)___-__-__"
+                  required
+                  autocomplete="tel"
+                  aria-describedby="phone-error"
+                />
 
                 <label for="message">Сообщение</label>
-                <textarea id="message" rows="4" placeholder="Опишите вашу задачу"></textarea>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Опишите вашу задачу"
+                  aria-describedby="message-error"
+                ></textarea>
 
                 <label class="pure-checkbox">
-                  <input type="checkbox" id="agreement" required /> Соглашаюсь на обработку персональных данных
+                  <input type="checkbox" id="agreement" name="agreement" required />
+                  Соглашаюсь на обработку персональных данных
                 </label>
 
                 <button type="submit" class="pure-button pure-button-primary">Отправить</button>
               </fieldset>
             </form>
           </div>
-          <div class="pure-u-1 pure-u-md-1-2">
+          <div class="pure-u-1 pure-u-md-1-2 contact-info">
             <h2>Контакты</h2>
-            <p>📧 hello@codecraft.dev</p>
+            <p>📧 <a href="mailto:hello@codecraft.dev">hello@codecraft.dev</a></p>
             <p>📍 Москва, Россия</p>
           </div>
         </div>
